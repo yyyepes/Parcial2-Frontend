@@ -59,7 +59,7 @@ body {
       list-style: none;
       padding: 0;
     }
-
+    
     li {
       background: white;
       margin-bottom: 0.5rem;
@@ -69,7 +69,7 @@ body {
       justify-content: space-between;
       align-items: center;
     }
-
+    
     .done {
       text-decoration: line-through;
       color: gray;
@@ -82,7 +82,12 @@ body {
       border-radius: 4px;
       cursor: pointer;
     }
-
+    li .dates {
+      display: block;
+      font-size: 0.8rem;
+      color: #666;
+       margin-top: 0.3rem;
+    }
     .edit { background: #ffc107; }
     .toggle { background: #28a745; color: white; }
     .delete { background: #dc3545; color: white; }
