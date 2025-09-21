@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/todo.css" />
   <script defer src="js/todo.js"></script>
   <title>To-Do List</title>
-
 </head>
+
 <body>
-  <header>
-    <h2>Bienvenido, <span id="user"></span> 👋</h2>
-    <button id="logoutBtn">Cerrar Sesión</button>
-  </header>
+  <div class="app-container">
+    <header>
+      <h1>Gestor de Tareas</h1>
+      <div class="user-info">
+        <span>Bienvenido, <strong id="user"></strong> 👋</span>
+        <button id="logoutBtn">Cerrar Sesión</button>
+      </div>
+    </header>
 
-  <form id="taskForm">
-    <input type="text" id="taskInput" placeholder="Escribe una nueva tarea..." required>
-    <button type="submit" class="add">Agregar</button>
-  </form>
-  
-  <ul id="taskList"></ul>
+    <main>
+      <section class="add-task-section">
+        <h2>Agregar Nueva Tarea</h2>
+        <form id="taskForm">
+          <input type="text" id="taskInput" placeholder="Escribe una nueva tarea (mínimo 10 caracteres)..." required>
+          <button type="submit" class="add">Agregar</button>
+        </form>
+        <p class="error-msg" id="taskError"></p>
+      </section>
 
+      <section class="tasks-section">
+        <h2>Mis Tareas</h2>
+        <ul id="taskList" class="task-list"></ul>
+      </section>
 
+      <section class="tasks-section api-section">
+        <h2>Tareas de la API</h2>
+        <ul id="apiTaskList" class="task-list"></ul>
+      </section>
+    </main>
+  </div>
 </body>
+
 </html>
